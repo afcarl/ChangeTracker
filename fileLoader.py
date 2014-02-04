@@ -59,12 +59,12 @@ class FileLoader():
         '''
         newtextlist = []
         try:
-            document = opendocx(self.standard_dir + filename)
+            document = opendocx(join(self.standard_dir, filename))
         except:
             print "could not open document. Text list will be empty"
         else:
             try:
-                comments = opencomments(self.standard_dir + filename)
+                comments = opencomments(join(self.standard_dir,  filename))
             except:
                 comments = None
             try:
